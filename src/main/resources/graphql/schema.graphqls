@@ -1,0 +1,48 @@
+type Query {
+    person(name: String): [Person]
+}
+
+type Mutation {
+    createPerson(person: PersonInput): Person
+    deletePerson(id: ID!): ID
+}
+
+type Person {
+    id: ID,
+    name: String,
+    birthYear: String,
+    films: String,
+    vehicles: String,
+}
+
+type Film {
+    episodeId: ID
+    title: String,
+    opening_crawl: String,
+    director: String,
+    producer: String,
+    release_date: String,
+}
+
+type Vehicle {
+    id: ID,
+    name: String,
+    cargo_capacity: String,
+    consumables: String,
+    cost_in_credits: String,
+    crew: String,
+    length: String,
+    manufacturer: String,
+    max_atmosphering_speed: String,
+    model: String,
+    passengers: String,
+    vehicle_class: String
+}
+
+input PersonInput{
+    id: ID,
+    name: String,
+    birthYear: String,
+    films: String,
+    vehicles: String,
+}
