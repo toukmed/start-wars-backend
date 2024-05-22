@@ -23,6 +23,7 @@ public class PersonMapper {
 
     public Person entityToDto(Person person){
         return Person.builder()
+                .id(person.getId())
                 .name(person.getName())
                 .birthYear(person.getBirthYear())
                 .eyeColor(person.getEyeColor())

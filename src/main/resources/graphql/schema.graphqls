@@ -44,5 +44,15 @@ input PersonInput{
     name: String,
     birthYear: String,
     films: String,
+    filmss: [FilmInput],
     vehicles: String,
+}
+
+input FilmInput {
+    episodeId: ID
+    title: String,
+    opening_crawl: String,
+    director: String,
+    producer: String,
+    release_date: String,
 }
